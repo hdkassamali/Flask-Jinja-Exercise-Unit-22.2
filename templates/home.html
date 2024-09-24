@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
+content %}
+<form action="/form">
+  <label for="story">Choose your own adventure: </label>
+  <select name="story" id="story">
+    <option value="past">Past</option>
+    <option value="present">Present</option>
+    <option value="future">Future</option>
+  </select>
+  <button>Submit</button>
+</form>
+{% endblock %}

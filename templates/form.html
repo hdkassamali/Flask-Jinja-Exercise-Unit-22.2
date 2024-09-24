@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
+content %}
+<h1>Madlibs</h1>
+<h3>You have chosen a {{story_choice}} adventure!</h3>
+<form action="/story">
+  {% for question in story.prompts %}
+  <div>
+    <label for="{{question}}">{{question}}: </label>
+    <input
+      id="{{question}}"
+      type="text"
+      placeholder="Enter {{question}}"
+      name="{{question}}"
+      required
+    />
+  </div>
+  {% endfor %}
+
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+{% endblock %}
